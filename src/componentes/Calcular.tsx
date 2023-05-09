@@ -4,7 +4,10 @@ import Padrao from "../estilos/Padrao";
 
 export default (props: any) =>{
     let [numero, usenumero] = useState('')
-    
+    let soma = ''
+    let x
+    let somav
+    let numerov
     const um = () => usenumero(numero+'1')
     const dois = () => usenumero(numero+'2')
     const tres = () => usenumero(numero+'3')
@@ -15,11 +18,46 @@ export default (props: any) =>{
     const oito = () => usenumero(numero+'8')
     const nove = () => usenumero(numero+'9')
     const zero = () => usenumero(numero+'0')
-    const mais = () => usenumero(numero+'1')
-    const menos = () => usenumero(numero+'1')
-    const dividir = () => usenumero(numero+'1')
-    const mult = () => usenumero(numero+'1')
-    const limpar = () => usenumero(numero='')
+    
+    function limpar (){
+        numero = ''
+        soma = ''
+        somav = ''
+        numerov = ''
+
+    }
+    function m (){
+        soma = numero
+        numero = ''
+        x = 1
+    }
+    function n (){
+        soma = numero
+        numero = ''
+        x = 2
+    }
+    function d (){
+        soma = numero
+        numero = ''
+        x = 3
+    }
+    function u (){
+        soma = numero
+        numero = ''
+        x = 4
+    }
+    function i (){
+        if(x = 1){
+            somav = Number(soma)
+            numerov = Number(numero)
+            soma = numero
+            
+            console.warn(somav+numerov)
+
+        }
+    }
+        
+
     
 
 
@@ -72,19 +110,27 @@ export default (props: any) =>{
             />
             <Button
                 title="+"
+                onPress={m}
             />
             <Button
                 title="-"
+                onPress={n}
             />
             <Button
                 title="*"
+                onPress={u}
             />
             <Button
                 title="/"
+                onPress={d}
             />
             <Button
                 title="Limpar"
                 onPress={limpar}
+            />
+            <Button
+                title="="
+                onPress={i}
             />
 
 
