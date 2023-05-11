@@ -4,8 +4,8 @@ import Padrao from "../estilos/Padrao";
 
 export default (props: any) =>{
     let [numero, usenumero] = useState('')
-    let soma = ''
-    let x
+    let [soma, usesoma] = useState('')
+    let x 
     let somav
     let numerov
     const um = () => usenumero(numero+'1')
@@ -19,6 +19,7 @@ export default (props: any) =>{
     const nove = () => usenumero(numero+'9')
     const zero = () => usenumero(numero+'0')
     
+    
     function limpar (){
         numero = ''
         soma = ''
@@ -27,9 +28,12 @@ export default (props: any) =>{
 
     }
     function m (){
+        
         soma = numero
         numero = ''
         x = 1
+        
+        
     }
     function n (){
         soma = numero
@@ -50,11 +54,23 @@ export default (props: any) =>{
         if(x = 1){
             somav = Number(soma)
             numerov = Number(numero)
-            soma = numero
-            
             console.warn(somav+numerov)
 
+        }else if(x = 2){
+            somav = Number(soma)
+            numerov = Number(numero)
+            console.warn(somav-numerov)
+        }else if(x = 3){
+            somav = Number(soma)
+            numerov = Number(numero)
+            console.warn(somav/numerov)
+        }else if(x = 4){
+            somav = Number(soma)
+            numerov = Number(numero)
+            console.warn(somav*numerov)
         }
+
+
     }
         
 
@@ -67,6 +83,8 @@ export default (props: any) =>{
         <>
 
             <Text>Calcu: {numero}</Text>
+            <Text> soma: {}</Text>
+            <Text>x: {x}</Text>
             <Button
                 title="1"
                 onPress={um}
@@ -91,6 +109,7 @@ export default (props: any) =>{
             <Button
                 title="6"
                 onPress={seis}
+                
             />
             <Button
                 title="7"
