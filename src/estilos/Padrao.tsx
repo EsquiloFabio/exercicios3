@@ -19,49 +19,4 @@ export default  StyleSheet.create ({
         margin: 12,
         borderWidth: 1,
     }
-    b1: {
-
-    }
-    b2: {
-    
-    }
-    b3: {
-    
-    }
-    b4: {
-    
-    }
-    b5: {
-    
-    }
-    b6: {
-    
-    }
-    b7: {
-    
-    }
-    b8: {
-    
-    }
-    b9: {
-    
-    }
-    b0: {
-    
-    }
-    bm: {
-    
-    }
-    bn: {
-    
-    }
-    bd: {
-    
-    }
-    bu: {
-    
-    }
-    bl: {
-    
-    }
 })

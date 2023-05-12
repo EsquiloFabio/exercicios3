@@ -5,69 +5,116 @@ import Padrao from "../estilos/Padrao";
 export default (props: any) =>{
     let [numero, usenumero] = useState('')
     let [soma, usesoma] = useState('')
-    let x 
-    let somav
-    let numerov
-    const um = () => usenumero(numero+'1')
-    const dois = () => usenumero(numero+'2')
-    const tres = () => usenumero(numero+'3')
-    const quatro = () => usenumero(numero+'4')
-    const cinco = () => usenumero(numero+'5')
-    const seis = () => usenumero(numero+'6')
-    const sete = () => usenumero(numero+'7')
-    const oito = () => usenumero(numero+'8')
-    const nove = () => usenumero(numero+'9')
-    const zero = () => usenumero(numero+'0')
+    let [x, usex] = useState(0) 
+    let [somav, usesomav] = useState(0)
+    let [numerov, usenumerov] = useState(0)
+    let [ultimo, useultimo] = useState('')
+    const um = () => {
+        useultimo(numero)
+        usenumero(numero+'1')
+        
+    }
+    const dois = () => {
+        useultimo(numero)
+        usenumero(numero+'2')
+        
+    }
+    const tres = () => {
+        useultimo(numero)
+        usenumero(numero+'3')
+        
+    }
+    const quatro = () => {
+        useultimo(numero)
+        usenumero(numero+'4')
+        
+    }
+    const cinco = () => {
+        useultimo(numero)
+        usenumero(numero+'5')
+        
+    }
+    const seis = () => {
+        useultimo(numero)
+        usenumero(numero+'6')
+        
+    }
+    const sete = () => {
+        useultimo(numero)
+        usenumero(numero+'7')
+        
+    }
+    const oito = () => {
+        useultimo(numero)
+        usenumero(numero+'8')
+        
+    }
+    const nove = () => {
+        useultimo(numero)
+        usenumero(numero+'9')
+        
+    }
+    const zero = () => {
+        useultimo(numero)
+        usenumero(numero+'0')
+        
+    }
     
     
     function limpar (){
-        numero = ''
-        soma = ''
-        somav = ''
-        numerov = ''
+        usenumero('')
+        usesoma('')
+        usenumerov(0)
+        usesomav(0)
+        usex(0)
+        useultimo('')
 
     }
     function m (){
-        
-        soma = numero
-        numero = ''
-        x = 1
-        
-        
+        usesoma(numero)
+        usenumero('')
+        usex(1)
     }
     function n (){
-        soma = numero
-        numero = ''
-        x = 2
+        usesoma(numero)
+        usenumero('')
+        usex(2)
     }
     function d (){
-        soma = numero
-        numero = ''
-        x = 3
+        usesoma(numero)
+        usenumero('')
+        usex(3)
     }
     function u (){
-        soma = numero
-        numero = ''
-        x = 4
+        usesoma(numero)
+        usenumero('')
+        usex(4)
+    }
+    function b(){
+        usenumero(ultimo)
     }
     function i (){
         if(x = 1){
             somav = Number(soma)
             numerov = Number(numero)
-            console.warn(somav+numerov)
+            usesoma('')
+            usenumero((somav+numerov).toString())
 
         }else if(x = 2){
             somav = Number(soma)
             numerov = Number(numero)
-            console.warn(somav-numerov)
+            usesoma('')
+            usenumero((somav-numerov).toString())
         }else if(x = 3){
             somav = Number(soma)
             numerov = Number(numero)
-            console.warn(somav/numerov)
+            usesoma('')
+            usenumero((somav/numerov).toString())
         }else if(x = 4){
             somav = Number(soma)
             numerov = Number(numero)
-            console.warn(somav*numerov)
+            usesoma('')
+            usenumero((somav*numerov).toString())
         }
 
 
@@ -83,8 +130,6 @@ export default (props: any) =>{
         <>
 
             <Text>Calcu: {numero}</Text>
-            <Text> soma: {}</Text>
-            <Text>x: {x}</Text>
             <Button
                 title="1"
                 onPress={um}
@@ -93,6 +138,7 @@ export default (props: any) =>{
             <Button
                 title="2"
                 onPress={dois}
+                
             />
             <Button
                 title="3"
@@ -150,6 +196,10 @@ export default (props: any) =>{
             <Button
                 title="="
                 onPress={i}
+            />
+            <Button
+                title="back"
+                onPress={b}
             />
 
 
