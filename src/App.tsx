@@ -1,16 +1,13 @@
 import React, {Component} from "react";
 import { View, Button, Text, StyleSheet, TextInput } from "react-native";
-import Calcular from "./componentes/Calcular";
+import saca from "./Componentes/saque";
+import deposite from "./Componentes/deposito";
 
 export default class app extends Component{
-
-
     render() {
-  
-      
       return (
         <View style = {estilos.container}>
-            <Calcular/>
+          
           
   
         </View>
